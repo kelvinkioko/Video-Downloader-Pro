@@ -1,0 +1,20 @@
+plugins {
+    id("com.android.dynamic-feature")
+    id("kotlin-android")
+    id("kotlin-android-extensions")
+}
+
+apply from: "$rootProject.projectDir/android_defaults.gradle"
+
+android {
+    resourcePrefix("browser")
+}
+
+dependencies {
+    implementation(project(":app"))
+    implementation(project(":common"))
+    implementation(project(":webview"))
+}
+repositories {
+    mavenCentral()
+}

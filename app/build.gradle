@@ -1,0 +1,34 @@
+plugins {
+    id("com.android.application")
+    id("kotlin-android")
+    id("kotlin-android-extensions")
+    id("org.jetbrains.kotlin.kapt")
+    id("androidx.navigation.safeargs.kotlin")
+}
+
+apply from: "$rootProject.projectDir/ktlint.gradle"
+apply plugin: 'kotlin-android'
+
+apply from: "$rootProject.projectDir/android_defaults.gradle"
+
+android {
+    defaultConfig.applicationId("video.downloader.plus")
+    dynamicFeatures = [':browser']
+}
+
+/*
+ * All necessary dependencies are already implemented in the common project so
+ * by calling it here we inherit all of them. This will just keep it clean and
+ * simple to update in case we need to upgrade the imports
+ *
+ * An interesting tid bit is if you use 'implementation' → this dependency is only available to entities within this module
+ * but if you use 'api' → this dependency will also be available within any module which depends on this module
+ * Source https://medium.com/@julesrosser/handling-gradle-dependencies-in-multiple-module-android-projects-9e590c3d20dc
+ */
+dependencies {
+    implementation(project(":common"))
+    implementation(project(":webview"))
+}
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/browser_nav_graph"
+    app:startDestination="@id/browserMainFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/browserMainFragment"
+        android:name="video.downloader.plus.browser.BrowserMainFragment"
+        android:label="BrowserMainFragment"
+        tools:layout="@layout/browser_main"/>
+
+</navigation>

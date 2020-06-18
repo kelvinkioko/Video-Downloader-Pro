@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#065d68</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#ffb129</color>
+
+    <color name="window_background_light">#F6F6F6</color>
+    <color name="window_settings_background_light">#F9F9F9</color>
+    <color name="status_bar_background_light">@android:color/white</color>
+    <color name="toolbar_background_light">@android:color/white</color>
+    <color name="text_primary_color_light">#303030</color>
+    <color name="text_secondary_color_light">#808080</color>
+    <color name="text_accent_color_light">@color/colorAccent</color>
+    <color name="text_dark_color_light">#000000</color>
+    <color name="card_background_light">@android:color/white</color>
+
+    <color name="window_background_dark">#181818</color>
+    <color name="window_settings_background_dark">#181818</color>
+    <color name="status_bar_background_dark">#000000</color>
+    <color name="toolbar_background_dark">#000000</color>
+    <color name="text_primary_color_dark">#F2F2F2</color>
+    <color name="text_secondary_color_dark">#B0B0B0</color>
+    <color name="text_accent_color_dark">@color/colorAccent</color>
+    <color name="text_dark_color_dark">#FFFFFF</color>
+    <color name="card_background_dark">#292929</color>
+
+    <color name="color_text_title_1">#444444</color>
+
+    <color name="on_boarding_window_light">#F0F0F0</color>
+    <color name="on_boarding_window_dark">#000000</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <!--Text-->
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="background_secondary_text">#30757575</color>
+    <color name="hint_text">#aeb0a5</color>
+    <color name="hint_text_transluscent">#5005986a</color>
+    <color name="strok">#e4e5ea</color>
+
+    <integer-array name="pocket_bar_colors">
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+    </integer-array>
+
+    <color name="pocket_color_1">#85edb9</color>
+    <color name="pocket_color_2">#34bdb7</color>
+    <color name="pocket_color_3">#ee4458</color>
+    <color name="pocket_color_4">#fcb74d</color>
+</resources>

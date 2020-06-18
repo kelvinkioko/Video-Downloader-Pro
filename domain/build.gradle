@@ -1,0 +1,16 @@
+import video.downloader.plus.buildsrc.Dependencies
+
+plugins {
+    id("java-library")
+    id("kotlin")
+}
+
+dependencies {
+    implementation(Dependencies.Kotlin.stdlib)
+    implementation(Dependencies.Retrofit.retrofit)
+    implementation(Dependencies.Kotlin.Coroutines.core)
+    implementation(Dependencies.Koin.core)
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

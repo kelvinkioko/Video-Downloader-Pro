@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/browser_home"
+        android:layout_width="48dp"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_gravity="end|center_vertical"
+        android:background="?android:selectableItemBackground"
+        android:padding="12dp"
+        android:tint="#ffffff"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:srcCompat="@drawable/ic_home"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_search"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintEnd_toStartOf="@+id/activity_main_search"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_search" />
+
+    <EditText
+        android:id="@+id/activity_main_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/background_search"
+        android:hint="Search here"
+        android:imeOptions="actionSearch|flagNoExtractUi"
+        android:inputType="textNoSuggestions"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="24dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="#80ffffff"
+        android:textSize="17sp"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toStartOf="@+id/browser_clear_input"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintStart_toEndOf="@+id/browser_home"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/browser_clear_input"
+        android:layout_width="48dp"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_gravity="end|center_vertical"
+        android:background="?android:selectableItemBackground"
+        android:padding="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:tint="#ffffff"
+        app:srcCompat="@drawable/ic_clear_black_24dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_search"
+        app:layout_constraintStart_toEndOf="@+id/activity_main_search"
+        app:layout_constraintEnd_toStartOf="@+id/browser_refresh"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_search" />
+
+    <ImageView
+        android:id="@+id/browser_refresh"
+        android:layout_width="48dp"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_gravity="end|center_vertical"
+        android:background="?android:selectableItemBackground"
+        android:padding="12dp"
+        android:tint="#ffffff"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:srcCompat="@drawable/ic_refresh"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_search"
+        app:layout_constraintStart_toEndOf="@+id/browser_clear_input"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_search"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar" />
+
+    <video.downloader.plus.webview.web.MainWebView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/downloads_background"
+        android:elevation="5dp"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@color/colorPrimaryDark"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/downloads_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:elevation="7dp"
+        app:layout_constraintTop_toTopOf="@+id/downloads_background"
+        app:layout_constraintEnd_toEndOf="@+id/downloads_background"
+        app:layout_constraintStart_toStartOf="@+id/downloads_background"
+        app:layout_constraintBottom_toBottomOf="@+id/downloads_background"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

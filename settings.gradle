@@ -1,0 +1,4 @@
+include ':webview'
+include ':browser'
+include ":domain", ":app", ":common"
+rootProject.name = "Video Downloader Plus"

@@ -1,0 +1,5 @@
+<resources>
+    <string name="webview_app_name">WebView</string>
+    <string name="webview_title_browser">Browser</string>
+    <string name="webview_title_webview">WebView</string>
+</resources>
