@@ -1,11 +1,11 @@
-package video.downloader.plus.webview.search_engine
+package video.downloader.plus.webview.searchengine
 
-import video.downloader.plus.webview.search_engine.SearchEngine.Companion.SEARCH_ENGINE_BING
-import video.downloader.plus.webview.search_engine.SearchEngine.Companion.SEARCH_ENGINE_DUCK_DUCK_GO
-import video.downloader.plus.webview.search_engine.SearchEngine.Companion.SEARCH_ENGINE_GOOGLE
-import video.downloader.plus.webview.search_engine.SearchEngine.Companion.SEARCH_ENGINE_QWANT
-import video.downloader.plus.webview.search_engine.SearchEngine.Companion.SEARCH_ENGINE_YAHOO
-import video.downloader.plus.webview.search_engine.SearchEngineVideo.Companion.SEARCH_ENGINE_VIDEO_YOUTUBE
+import video.downloader.plus.webview.searchengine.SearchEngine.Companion.SEARCH_ENGINE_BING
+import video.downloader.plus.webview.searchengine.SearchEngine.Companion.SEARCH_ENGINE_DUCK_DUCK_GO
+import video.downloader.plus.webview.searchengine.SearchEngine.Companion.SEARCH_ENGINE_GOOGLE
+import video.downloader.plus.webview.searchengine.SearchEngine.Companion.SEARCH_ENGINE_QWANT
+import video.downloader.plus.webview.searchengine.SearchEngine.Companion.SEARCH_ENGINE_YAHOO
+import video.downloader.plus.webview.searchengine.SearchEngineVideo.Companion.SEARCH_ENGINE_VIDEO_YOUTUBE
 
 class SearchEngineManagerImpl() : SearchEngineManager {
 

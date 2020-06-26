@@ -1,19 +1,15 @@
 package video.downloader.plus.webview.floating
 
-import video.downloader.plus.webview.search_engine.SearchEngineManager
+import video.downloader.plus.webview.searchengine.SearchEngineManager
 
 class FloatingPresenter(
     private val screen: FloatingContract.Screen,
     private val searchEngineManager: SearchEngineManager
 ) : FloatingContract.UserAction {
 
-    override fun onAttachedToWindow() {
+    override fun onAttachedToWindow() {}
 
-    }
-
-    override fun onDetachedFromWindow() {
-
-    }
+    override fun onDetachedFromWindow() {}
 
     override fun onQuitClicked() {
         screen.removeFromWindowManager()

@@ -11,5 +11,4 @@ interface ApiService {
     @POST("login")
     @FormUrlEncoded
     fun startUserSignin(@Field("email") email_address: String?, @Field("password") password: String?): Call<ResponseBody>
-
 }

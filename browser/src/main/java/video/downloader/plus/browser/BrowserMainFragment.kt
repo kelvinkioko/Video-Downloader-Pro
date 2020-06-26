@@ -146,17 +146,13 @@ class BrowserMainFragment : Fragment(R.layout.browser_main), BrowserMainContract
         requireActivity().finish()
     }
 
-    override fun navigateSettings() {
-
-    }
+    override fun navigateSettings() {}
 
     override fun clearData() {
         browserWebView.clearData()
     }
 
-    override fun showClearDataMessage() {
-
-    }
+    override fun showClearDataMessage() {}
 
     override fun showLoader(progressPercent: Int) {
         browserProgress.visibility = View.VISIBLE
@@ -334,9 +330,7 @@ class BrowserMainFragment : Fragment(R.layout.browser_main), BrowserMainContract
 //                    downloadsEntity.add(download)
 //                }
             }
-            Handler(Looper.getMainLooper()).post {
-
-            }
+            Handler(Looper.getMainLooper()).post {}
         }
     }
 
@@ -408,5 +402,4 @@ class BrowserMainFragment : Fragment(R.layout.browser_main), BrowserMainContract
             context.startActivity(intent)
         }
     }
-
 }
