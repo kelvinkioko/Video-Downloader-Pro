@@ -16,9 +16,9 @@ class MainApplication : Application() {
         super.onCreate()
         setupApplicationGraph()
 
-//        if (BuildConfig.DEBUG) {
-//            enableDebuggableWebView()
-//        }
+        if (BuildConfig.DEBUG) {
+            enableDebuggableWebView()
+        }
     }
 
     private fun setupApplicationGraph() {
