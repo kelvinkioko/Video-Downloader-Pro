@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.pm.ApplicationInfo
 import android.os.Build
 import android.webkit.WebView
+import org.koin.android.BuildConfig
 import video.downloader.plus.webview.ApplicationGraph
 
 /**
@@ -15,7 +16,6 @@ class MainApplication : Application() {
         super.onCreate()
         setupApplicationGraph()
 
-        // Debuggable WebView
         if (BuildConfig.DEBUG) {
             enableDebuggableWebView()
         }
