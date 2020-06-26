@@ -35,7 +35,7 @@ object Dependencies {
         const val legacy = "androidx.legacy:legacy-support-v4:1.0.0"
 
         const val ext_junit = "androidx.test.ext:junit:1.1.1"
-        const val espresso =  "androidx.test.espresso:espresso-core:3.2.0"
+        const val espresso = "androidx.test.espresso:espresso-core:3.2.0"
 
         object Lifecycle {
             private const val lifecycle_version = "2.2.0"
@@ -80,13 +80,12 @@ object Dependencies {
         object Coroutines {
             private const val version = "1.3.5"
             const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
-            const val android ="org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
+            const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
         }
 
         object GradlePlugin {
             const val artifact = "org.jetbrains.kotlin:kotlin-gradle-plugin"
             const val gradle_plugin = "$artifact:$version"
-
         }
     }
 
@@ -109,16 +108,16 @@ object Dependencies {
     object Retrofit {
         // -- Retrofit2
         private const val retrofit2_version = "2.8.1"
-        const val retrofit =  "com.squareup.retrofit2:retrofit:$retrofit2_version"
-        const val converter =  "com.squareup.retrofit2:converter-gson:$retrofit2_version"
-        const val moshi_converter =  "com.squareup.retrofit2:converter-moshi:$retrofit2_version"
+        const val retrofit = "com.squareup.retrofit2:retrofit:$retrofit2_version"
+        const val converter = "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+        const val moshi_converter = "com.squareup.retrofit2:converter-moshi:$retrofit2_version"
     }
 
     object RoomDB {
         // -- Room DB
         private const val room_version = "1.1.1"
         const val room_runtime = "android.arch.persistence.room:runtime:$room_version"
-        const val room_compiler =  "android.arch.persistence.room:compiler:$room_version"
+        const val room_compiler = "android.arch.persistence.room:compiler:$room_version"
     }
 
     object Material {
@@ -127,7 +126,7 @@ object Dependencies {
     }
 
     object Glide {
-        //glide
+        // glide
         private const val glide_version = "4.11.0"
         const val glide = "com.github.bumptech.glide:glide:$glide_version"
         const val compiler = "com.github.bumptech.glide:compiler:$glide_version"
@@ -141,5 +140,4 @@ object Dependencies {
 
     private const val flowbinding_version = "0.11.1"
     const val FlowBinding = "io.github.reactivecircus.flowbinding:flowbinding-android:$flowbinding_version"
-
 }

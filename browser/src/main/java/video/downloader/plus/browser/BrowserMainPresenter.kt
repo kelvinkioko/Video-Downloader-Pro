@@ -7,7 +7,7 @@ import video.downloader.plus.webview.searchengine.SearchEngineManager
 import video.downloader.plus.webview.suggestion.SuggestionManager
 import video.downloader.plus.webview.suggestion.Suggestions
 
-internal class BrowserMainPresenter (
+internal class BrowserMainPresenter(
     private val screen: BrowserMainContract.Screen,
     private val searchEngineManager: SearchEngineManager,
     private val suggestionManager: SuggestionManager,
@@ -106,7 +106,7 @@ internal class BrowserMainPresenter (
         if (screen.webViewCanGoBack()) {
             screen.webViewBack()
             return
-        }else {
+        } else {
             setWebViewVisible(false)
         }
     }
@@ -192,5 +192,4 @@ internal class BrowserMainPresenter (
             screen.showSuggestions(suggestions.suggestions)
         }
     }
-
 }

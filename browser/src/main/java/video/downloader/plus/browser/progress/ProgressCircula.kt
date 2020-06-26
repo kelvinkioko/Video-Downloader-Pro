@@ -23,7 +23,6 @@ class ProgressCircula(context: Context, attributeSet: AttributeSet? = null, defS
         } finally {
             a.recycle()
         }
-
     }
 
     private val oval = RectF()
