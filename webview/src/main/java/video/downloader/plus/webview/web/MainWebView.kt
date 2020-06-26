@@ -98,7 +98,7 @@ class MainWebView @JvmOverloads constructor(context: Context, attrs: AttributeSe
                                     Log.e("listener isn't", "Empty")
                                     videoSearchViewListener!!.onStartInspectingURL()
                                 } else {
-                                    Log.e("listener is", "Empty")
+                                    Log.e("listener is", "Empty log")
                                 }
                             }
 
