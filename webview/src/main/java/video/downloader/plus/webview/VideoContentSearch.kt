@@ -92,21 +92,20 @@ abstract class VideoContentSearch(private val mContext: Context, private val url
             } else if (contentType.contains("audio")) {
                 name = "audio"
             }
-            if (host.contains("youtube.com") || URL(link).host.contains("googlevideo.com")) { //link  = link.replaceAll("(range=)+(.*)+(&)",
+            if (host.contains("youtube.com") || URL(link).host.contains("googlevideo.com")) { // link  = link.replaceAll("(range=)+(.*)+(&)",
 // "");
                 val r = link.lastIndexOf("&range")
                 if (r > 0) {
                     link = link.substring(0, r)
                 }
-                val ytCon: URLConnection
-                ytCon = URL(link).openConnection()
+                val ytCon: URLConnection = URL(link).openConnection()
                 ytCon.connect()
                 size = ytCon.getHeaderField("content-length")
                 website = "https://www.youtube.com"
                 if (host.contains("youtube.com")) {
                     val embededURL =
                         URL("http://www.youtube.com/oembed?url=$page&format=json")
-                    try { //name = new JSONObject(IOUtils.toString(embededURL)).getString("title");
+                    try { // name = new JSONObject(IOUtils.toString(embededURL)).getString("title");
                         val jsonString: String
                         val `in` = embededURL.openStream()
                         val inReader = InputStreamReader(
@@ -222,11 +221,10 @@ abstract class VideoContentSearch(private val mContext: Context, private val url
                     }
                 }
             } else {
-                Log.i(TAG, "Content type is " + contentType + " but site is not " + "supported")
+                Log.i(TAG, "Content type is $contentType but site is not supported")
             }
         } catch (e: IOException) {
             e.printStackTrace()
         }
     }
-
 }

@@ -2,8 +2,6 @@ package video.downloader.plus.webview.network
 
 import android.content.Context
 import okhttp3.OkHttpClient
-import video.downloader.plus.webview.network.NetworkManager
-import video.downloader.plus.webview.network.NetworkManagerImpl
 import java.util.concurrent.TimeUnit
 
 class NetworkModule(private val context: Context) {

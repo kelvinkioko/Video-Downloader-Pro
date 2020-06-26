@@ -1,4 +1,4 @@
-package video.downloader.plus.webview.web_css
+package video.downloader.plus.webview.webcss
 
 import android.content.Context
 

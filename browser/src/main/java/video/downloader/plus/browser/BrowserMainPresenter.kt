@@ -3,7 +3,7 @@ package video.downloader.plus.browser
 import android.os.Bundle
 import android.util.Log
 import video.downloader.plus.webview.floating.FloatingManager
-import video.downloader.plus.webview.search_engine.SearchEngineManager
+import video.downloader.plus.webview.searchengine.SearchEngineManager
 import video.downloader.plus.webview.suggestion.SuggestionManager
 import video.downloader.plus.webview.suggestion.Suggestions
 

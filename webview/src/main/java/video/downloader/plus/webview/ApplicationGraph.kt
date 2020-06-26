@@ -5,9 +5,9 @@ import android.content.Context
 import video.downloader.plus.webview.floating.FloatingModule
 import video.downloader.plus.webview.main_thread.MainThreadModule
 import video.downloader.plus.webview.network.NetworkModule
-import video.downloader.plus.webview.search_engine.SearchEngineModule
+import video.downloader.plus.webview.searchengine.SearchEngineModule
 import video.downloader.plus.webview.suggestion.SuggestionModule
-import video.downloader.plus.webview.web_css.WebCssModule
+import video.downloader.plus.webview.webcss.WebCssModule
 
 class ApplicationGraph(private val context: Context) {
 

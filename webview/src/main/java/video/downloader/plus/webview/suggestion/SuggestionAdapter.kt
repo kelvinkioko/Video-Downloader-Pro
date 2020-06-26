@@ -20,7 +20,7 @@ class SuggestionAdapter(listener: SuggestionClickListener) : ListDelegationAdapt
         notifyDataSetChanged()
     }
 
-    //region Suggestion
+    // region Suggestion
     private class SuggestionAdapterDelegate(
         private val listener: SuggestionClickListener
     ) : AbsListItemAdapterDelegate<Any, Any, SuggestionViewHolder>() {
@@ -87,5 +87,5 @@ class SuggestionAdapter(listener: SuggestionClickListener) : ListDelegationAdapt
         fun onSuggestionClicked(suggestion: String)
         fun onSuggestionImageClicked(suggestion: String)
     }
-    //endregion Suggestion
+    // endregion Suggestion
 }

@@ -22,7 +22,7 @@ import javax.net.ssl.SSLSocketFactory
 import video.downloader.plus.common.R as CommonResources
 import video.downloader.plus.webview.ApplicationGraph
 import video.downloader.plus.webview.VideoContentSearch
-import video.downloader.plus.webview.web_css.WebCssModule
+import video.downloader.plus.webview.webcss.WebCssModule
 
 class MainWebView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : WebView(context, attrs, defStyleAttr) {
 
@@ -97,7 +97,7 @@ class MainWebView @JvmOverloads constructor(context: Context, attrs: AttributeSe
                                 if (videoSearchViewListener != null) {
                                     Log.e("listener isn't", "Empty")
                                     videoSearchViewListener!!.onStartInspectingURL()
-                                }else{
+                                } else {
                                     Log.e("listener is", "Empty")
                                 }
                             }
