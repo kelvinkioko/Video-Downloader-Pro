@@ -7,7 +7,6 @@ import video.downloader.plus.webview.main_thread.MainThreadModule
 import video.downloader.plus.webview.network.NetworkModule
 import video.downloader.plus.webview.search_engine.SearchEngineModule
 import video.downloader.plus.webview.suggestion.SuggestionModule
-import video.downloader.plus.webview.theme.ThemeModule
 import video.downloader.plus.webview.web_css.WebCssModule
 
 class ApplicationGraph(private val context: Context) {
@@ -18,7 +17,6 @@ class ApplicationGraph(private val context: Context) {
     private val networkManagerInternal by lazy { NetworkModule(context).createNetworkManager() }
     private val searchEngineManagerInternal by lazy { SearchEngineModule().createSearchEngineManager() }
     private val suggestionManagerInternal by lazy { SuggestionModule().createSuggestionManager() }
-    private val themeManagerInternal by lazy { ThemeModule(context).createThemeManager() }
     private val webCssManagerInternal by lazy { WebCssModule(context).createWebCssManager() }
 
     companion object {
@@ -32,7 +30,6 @@ class ApplicationGraph(private val context: Context) {
         fun getNetworkManager() = graph!!.networkManagerInternal
         fun getSearchEngineManager() = graph!!.searchEngineManagerInternal
         fun getSuggestionManager() = graph!!.suggestionManagerInternal
-        fun getThemeManager() = graph!!.themeManagerInternal
         fun getWebCssManager() = graph!!.webCssManagerInternal
 
         @JvmStatic

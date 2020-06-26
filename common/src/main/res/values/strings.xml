@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Play pal</string>
+    <string name="app_name">Video Dowloader Plus</string>
     <string name="title_browser">Browser</string>
     <string name="title_webview">WebView</string>
 </resources>

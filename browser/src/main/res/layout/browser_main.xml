@@ -5,98 +5,146 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <View
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/browser_home"
-        android:layout_width="48dp"
-        android:layout_height="@dimen/toolbar_height"
-        android:layout_gravity="end|center_vertical"
-        android:background="?android:selectableItemBackground"
-        android:padding="12dp"
-        android:tint="#ffffff"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?attr/selectableItemBackground"
-        app:srcCompat="@drawable/ic_home"
-        app:layout_constraintTop_toTopOf="@+id/activity_main_search"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintEnd_toStartOf="@+id/activity_main_search"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_main_search" />
-
-    <EditText
-        android:id="@+id/activity_main_search"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="start|center_vertical"
-        android:layout_weight="1"
-        android:background="@drawable/background_search"
-        android:hint="Search here"
-        android:imeOptions="actionSearch|flagNoExtractUi"
-        android:inputType="textNoSuggestions"
-        android:paddingVertical="8dp"
-        android:paddingHorizontal="24dp"
-        android:singleLine="true"
-        android:textColor="@color/white"
-        android:textColorHint="#80ffffff"
-        android:textSize="17sp"
-        android:importantForAutofill="no"
-        app:layout_constraintEnd_toStartOf="@+id/browser_clear_input"
-        app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:layout_constraintStart_toEndOf="@+id/browser_home"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_home">
 
-    <ImageView
-        android:id="@+id/browser_clear_input"
-        android:layout_width="48dp"
-        android:layout_height="@dimen/toolbar_height"
-        android:layout_gravity="end|center_vertical"
-        android:background="?android:selectableItemBackground"
-        android:padding="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?attr/selectableItemBackground"
-        android:tint="#ffffff"
-        app:srcCompat="@drawable/ic_clear_black_24dp"
-        app:layout_constraintTop_toTopOf="@+id/activity_main_search"
-        app:layout_constraintStart_toEndOf="@+id/activity_main_search"
-        app:layout_constraintEnd_toStartOf="@+id/browser_refresh"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_main_search" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
 
-    <ImageView
-        android:id="@+id/browser_refresh"
-        android:layout_width="48dp"
-        android:layout_height="@dimen/toolbar_height"
-        android:layout_gravity="end|center_vertical"
-        android:background="?android:selectableItemBackground"
-        android:padding="12dp"
-        android:tint="#ffffff"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?attr/selectableItemBackground"
-        app:srcCompat="@drawable/ic_refresh"
-        app:layout_constraintTop_toTopOf="@+id/activity_main_search"
-        app:layout_constraintStart_toEndOf="@+id/browser_clear_input"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_main_search"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar" />
+            <EditText
+                android:id="@+id/browserSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/background_search"
+                android:hint="Search here"
+                android:imeOptions="actionSearch|flagNoExtractUi"
+                android:inputType="textNoSuggestions"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="24dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="#80ffffff"
+                android:textSize="15sp"
+                android:importantForAutofill="no"
+                app:layout_constraintEnd_toStartOf="@+id/browserClearInput"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <ImageView
+                android:id="@+id/browserClearInput"
+                android:layout_width="48dp"
+                android:layout_height="@dimen/toolbar_height"
+                android:layout_gravity="end|center_vertical"
+                android:background="?android:selectableItemBackground"
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:tint="#ffffff"
+                app:srcCompat="@drawable/ic_clear_black_24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/browserSearch"
+                app:layout_constraintEnd_toStartOf="@+id/browserRefresh"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <ImageView
+                android:id="@+id/browserRefresh"
+                android:layout_width="48dp"
+                android:layout_height="@dimen/toolbar_height"
+                android:layout_gravity="end|center_vertical"
+                android:background="?android:selectableItemBackground"
+                android:padding="12dp"
+                android:tint="#ffffff"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:srcCompat="@drawable/ic_refresh"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/browserClearInput"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <video.downloader.plus.webview.web.MainWebView
-        android:layout_width="match_parent"
+        android:id="@+id/browserWebView"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <View
+        android:id="@+id/browserToolbarShadow"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@drawable/shadow_bottom"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/browserProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:progressTint="@color/colorAccent"
+        android:max="100"
+        android:progress="0"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/browserIntroImage"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/default_space_2"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/browserIntroMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Automatic private browsing.\nBrowse. Erase. Repeat"
+        app:layout_constraintTop_toBottomOf="@+id/browserIntroImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/browserRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--  Start of browser downloader elements  -->
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/downloads_background"
+        android:id="@+id/downloadBackground"
         android:elevation="5dp"
         android:layout_width="56dp"
         android:layout_height="56dp"
@@ -107,18 +155,35 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/downloads_counter"
+        android:id="@+id/downloadCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10"
+        android:text="0"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         android:elevation="7dp"
-        app:layout_constraintTop_toTopOf="@+id/downloads_background"
-        app:layout_constraintEnd_toEndOf="@+id/downloads_background"
-        app:layout_constraintStart_toStartOf="@+id/downloads_background"
-        app:layout_constraintBottom_toBottomOf="@+id/downloads_background"/>
+        app:layout_constraintTop_toTopOf="@+id/downloadBackground"
+        app:layout_constraintEnd_toEndOf="@+id/downloadBackground"
+        app:layout_constraintStart_toStartOf="@+id/downloadBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/downloadBackground"/>
+
+    <video.downloader.plus.browser.progress.ProgressCircula
+        android:id="@+id/downloadLoader"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:elevation="7dp"
+        app:pgc_indeterminate="true"
+        app:pgc_showProgress="true"
+        app:pgc_rimColor="@color/pocket_color_4"
+        app:pgc_rimWidth="5dp"
+        app:pgc_speed="1"
+        app:layout_constraintTop_toTopOf="@+id/downloadBackground"
+        app:layout_constraintEnd_toEndOf="@+id/downloadBackground"
+        app:layout_constraintStart_toStartOf="@+id/downloadBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/downloadBackground"/>
+
+    <!--  End of browser downloader elements  -->
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/start"

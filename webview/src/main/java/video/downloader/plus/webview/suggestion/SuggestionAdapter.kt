@@ -3,14 +3,13 @@ package video.downloader.plus.webview.suggestion
 import android.os.Build
 import android.text.Html
 import android.view.ViewGroup
+import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.hannesdorfmann.adapterdelegates4.AbsListItemAdapterDelegate
 import com.hannesdorfmann.adapterdelegates4.AdapterDelegate
 import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 
-class SuggestionAdapter(
-    listener: SuggestionClickListener
-) : ListDelegationAdapter<List<Any>>() {
+class SuggestionAdapter(listener: SuggestionClickListener) : ListDelegationAdapter<List<Any>>() {
 
     init {
         delegatesManager.addDelegate(SuggestionAdapterDelegate(listener) as AdapterDelegate<List<Any>>)
@@ -78,7 +77,7 @@ class SuggestionAdapter(
             val spanned = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 Html.fromHtml(suggestion, Html.FROM_HTML_MODE_COMPACT)
             } else {
-                Html.fromHtml(suggestion)
+                HtmlCompat.fromHtml(suggestion, HtmlCompat.FROM_HTML_MODE_LEGACY)
             }
             view.setText(spanned)
         }

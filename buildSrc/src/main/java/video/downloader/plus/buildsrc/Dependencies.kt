@@ -24,6 +24,10 @@ object Dependencies {
 
     const val cicView = "de.hdodenhof:circleimageview:2.2.0"
 
+    const val mikepenz = "com.mikepenz:iconics-core:4.0.0"
+
+    const val hannesdorfmann = "com.hannesdorfmann:adapterdelegates4:4.2.0"
+
     object AndroidX {
         const val core_ktx = "androidx.core:core-ktx:1.3.0"
         const val appcompat = "androidx.appcompat:appcompat:1.1.0"

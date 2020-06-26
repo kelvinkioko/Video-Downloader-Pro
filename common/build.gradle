@@ -84,6 +84,9 @@ dependencies {
     // Testing Navigation
     androidTestImplementation Dependencies.AndroidX.Navigation.test
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    api(Dependencies.mikepenz)
+    api(Dependencies.hannesdorfmann)
 }
 repositories {
     mavenCentral()

@@ -1,36 +1,26 @@
 package video.downloader.plus.webview.web_css
 
 import android.util.Base64
-import video.downloader.plus.webview.theme.ThemeManager
 import java.io.InputStream
 
 class WebCssManagerImpl(
-    private val themeManager: ThemeManager,
     private val addOn: AddOn
 ) : WebCssManager {
 
     private val googleDarkThemeOnlyCss by createGoogleDarkThemeOnlyCss()
     private val googleCommonOnlyCss by createGoogleCommonOnlyCss()
     private val googleLightThemBase64Css by createGoogleLightThemBase64Css()
-    private val googleDarkThemBase64Css by createGoogleDarkThemBase64Css()
     private val youtubeMobileDarkThemeOnlyCss by createYoutubeMobileDarkThemeOnlyCss()
     private val youtubeMobileDarkThemBase64Css by createYoutubeMobileDarkThemBase64Css()
 
     override fun getCss(
         url: String
     ): String? {
-        val darkEnable = themeManager.isDarkEnable()
         if (url.startsWith("https://www.google.")) {
-            return if (darkEnable) {
-                googleDarkThemBase64Css
-            } else {
-                googleLightThemBase64Css
-            }
+            return googleLightThemBase64Css
         }
         if (url.startsWith("https://m.youtube.com")) {
-            if (darkEnable) {
-                return youtubeMobileDarkThemBase64Css
-            }
+            return youtubeMobileDarkThemBase64Css
         }
         return null
     }

@@ -1,6 +1,3 @@
-@file:Suppress("PackageName")
-
-/* ktlint-disable package-name */
 package video.downloader.plus.webview.search_engine
 
 import video.downloader.plus.webview.search_engine.SearchEngine.Companion.SEARCH_ENGINE_BING
@@ -99,7 +96,7 @@ class SearchEngineManagerImpl() : SearchEngineManager {
         "https://www.youtube.com/results?utm_source=opensearch&search_query=" + searchInput.replace(" ", "+")
 
     private fun searchGoogle(searchInput: String) =
-        "https://www.google.fr/search?q=" + searchInput.replace(" ", "+")
+        "https://www.google.com/search?q=" + searchInput.replace(" ", "+")
 
     private fun searchDuckDuckGo(searchInput: String) =
         "https://duckduckgo.com/?q=" + searchInput.replace(" ", "+")

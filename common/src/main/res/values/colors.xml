@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#065d68</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#ffb129</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#C0C0C0</color>
+    <color name="colorBackground">#ffffff</color>
+
+    <color name="browser_black_overlay">#66000000</color>
 
     <color name="window_background_light">#F6F6F6</color>
     <color name="window_settings_background_light">#F9F9F9</color>

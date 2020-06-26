@@ -2,7 +2,6 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/browser_nav_graph"
     app:startDestination="@id/browserMainFragment"
     tools:ignore="UnusedNavigation">
 
@@ -10,6 +9,16 @@
         android:id="@+id/browserMainFragment"
         android:name="video.downloader.plus.browser.BrowserMainFragment"
         android:label="BrowserMainFragment"
-        tools:layout="@layout/browser_main"/>
+        tools:layout="@layout/browser_main">
+        <action
+            android:id="@+id/toBrowserAvailableDownloads"
+            app:destination="@id/browserAvailableDownloads" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/browserAvailableDownloads"
+        android:name="video.downloader.plus.browser.BrowserAvailableDownloads"
+        android:label="BrowserAvailableDownloads"
+        tools:layout="@layout/browser_available_downloads"/>
 
 </navigation>

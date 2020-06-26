@@ -213,11 +213,9 @@ class FloatingView @JvmOverloads constructor(context: Context, attrs: AttributeS
                 override fun onLoad(configuration: FloatingManager.Configuration) {}
             }
         }
-        val themeManager = ApplicationGraph.getThemeManager()
         val searchEngineManager = ApplicationGraph.getSearchEngineManager()
         return FloatingPresenter(
             this,
-            themeManager,
             searchEngineManager
         )
     }

@@ -1,6 +1,3 @@
-@file:Suppress("PackageName")
-
-/* ktlint-disable package-name */
 package video.downloader.plus.webview.search_engine
 
 interface SearchEngineManager {

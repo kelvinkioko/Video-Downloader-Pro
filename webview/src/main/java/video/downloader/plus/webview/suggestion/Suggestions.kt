@@ -2,7 +2,6 @@ package video.downloader.plus.webview.suggestion
 
 import org.json.JSONArray
 import org.json.JSONException
-import java.lang.IllegalStateException
 
 data class Suggestions(
     val searchInput: String,
@@ -16,11 +15,6 @@ data class Suggestions(
             val json = try {
                 JSONArray(jsonStr)
             } catch (jsonException: JSONException) {
-                val illegalStateException = IllegalStateException(
-                    "jsonStr: $jsonStr",
-                    jsonException
-                )
-
                 return Suggestions(
                     searchInput,
                     suggestions
