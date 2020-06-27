@@ -34,6 +34,8 @@ jobs:
           key: gradle-${{ hashFiles('gradle-checksums.txt') }}-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
           restore-keys: |
             gradle-${{ hashFiles('gradle-checksums.txt') }}-
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: lintDebug
         run: ./gradlew lint
 
