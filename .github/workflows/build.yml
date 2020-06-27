@@ -34,8 +34,10 @@ jobs:
           key: gradle-${{ hashFiles('gradle-checksums.txt') }}-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
           restore-keys: |
             gradle-${{ hashFiles('gradle-checksums.txt') }}-
+            
       - name: Make gradlew executable
         run: chmod +x ./gradlew
+        
       - name: lintDebug
         run: ./gradlew lint
 
@@ -69,6 +71,9 @@ jobs:
          uses: actions/setup-java@v1
          with:
           java-version: 1.8
+      
+       - name: Make gradlew executable
+         run: chmod +x ./gradlew
 
        - name: ktlint
          run: ./gradlew ktlintCheck
