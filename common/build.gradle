@@ -13,28 +13,17 @@ android {
 }
 
 apply from: "$rootProject.projectDir/android_defaults.gradle"
-apply plugin: 'kotlin-android'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    api(project(":domain"))
 
     api(Dependencies.Kotlin.stdlib)
     api(Dependencies.AndroidX.appcompat)
     api(Dependencies.AndroidX.core_ktx)
     api(Dependencies.AndroidX.constraintLayout)
     api(Dependencies.AndroidX.legacy)
-    testImplementation Dependencies.junit
-    androidTestImplementation Dependencies.AndroidX.ext_junit
-    androidTestImplementation Dependencies.AndroidX.espresso
 
     api(Dependencies.cicView)
-
-    // -- Retrofit2
-    api(Dependencies.Retrofit.retrofit)
-    api(Dependencies.Retrofit.converter)
-    api(Dependencies.Retrofit.moshi_converter)
 
     // -- Lifecycle Components (ViewModel, LiveData and ReactiveStreams)
     api(Dependencies.AndroidX.Lifecycle.common)

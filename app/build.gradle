@@ -6,9 +6,6 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
 }
 
-apply from: "$rootProject.projectDir/ktlint.gradle"
-apply plugin: 'kotlin-android'
-
 apply from: "$rootProject.projectDir/android_defaults.gradle"
 
 android {
@@ -29,6 +26,7 @@ dependencies {
     implementation(project(":common"))
     implementation(project(":webview"))
 }
+
 repositories {
     mavenCentral()
 }

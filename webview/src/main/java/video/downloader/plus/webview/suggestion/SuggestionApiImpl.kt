@@ -1,13 +1,13 @@
 package video.downloader.plus.webview.suggestion
 
+import java.io.Closeable
+import java.io.IOException
+import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import okhttp3.ResponseBody
 import okhttp3.Response
-import okhttp3.Call
-import java.io.Closeable
-import java.io.IOException
+import okhttp3.ResponseBody
 
 class SuggestionApiImpl(
     private val okHttpClientLazy: Lazy<OkHttpClient>

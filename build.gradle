@@ -6,13 +6,15 @@ buildscript {
     repositories {
         google()
         jcenter()
-
+        maven { url "https://plugins.gradle.org/m2/" }
     }
+
     dependencies {
         classpath(Dependencies.AndroidBuildTools.gradle_plugin)
         classpath(Dependencies.Kotlin.GradlePlugin.gradle_plugin)
         classpath(Dependencies.AndroidX.Navigation.safe_args_gradle_plugin)
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jlleitschuh.gradle:ktlint-gradle:9.2.1"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -31,8 +33,6 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-task installGitHook(type: Copy) {
-    from new File(rootProject.rootDir, 'pre-commit')
-    into { new File(rootProject.rootDir, '.git/hooks') }
-    fileMode 0777
+subprojects {
+    apply plugin: "org.jlleitschuh.gradle.ktlint"
 }

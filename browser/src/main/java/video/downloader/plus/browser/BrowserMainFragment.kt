@@ -89,13 +89,6 @@ class BrowserMainFragment : Fragment(R.layout.browser_main), BrowserMainContract
         Toast.makeText(requireContext(), "View destroyed", Toast.LENGTH_LONG).show()
     }
 
-    // override
-    fun onNewIntent(intent: Intent?) {
-//        super.onNewIntent(intent)
-        val url = intent?.extras?.getString(EXTRA_URL)
-        userAction.onNewIntent(url)
-    }
-
     override fun onResume() {
         super.onResume()
         userAction.onResume()
@@ -192,7 +185,7 @@ class BrowserMainFragment : Fragment(R.layout.browser_main), BrowserMainContract
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     override fun setStatusBarBackgroundColorRes(@ColorRes colorRes: Int) {
         val color = ContextCompat.getColor(requireContext(), colorRes)
-        requireActivity(). window.statusBarColor = color
+        requireActivity().window.statusBarColor = color
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)

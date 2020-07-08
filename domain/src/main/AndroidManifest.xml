@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="video.downloader.plus.domain">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_webview">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>

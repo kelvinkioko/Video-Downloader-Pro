@@ -115,9 +115,9 @@ object Dependencies {
 
     object RoomDB {
         // -- Room DB
-        private const val room_version = "1.1.1"
-        const val room_runtime = "android.arch.persistence.room:runtime:$room_version"
-        const val room_compiler = "android.arch.persistence.room:compiler:$room_version"
+        private const val room_version = "2.2.5"
+        const val room_runtime = "androidx.room:room-runtime:$room_version"
+        const val room_compiler = "androidx.room:room-compiler:$room_version"
     }
 
     object Material {
